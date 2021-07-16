@@ -7,7 +7,7 @@ class AuthService {
   loggedIn() {
     // checks if saved token and it's still valid
     const token = this.getToken();
-    return !!token && !this.isTokenExpired(token); // handwaiving here
+    return !!token && !this.isTokenExpired(token);
   }
   isTokenExpired(token) {
     try {
@@ -20,7 +20,7 @@ class AuthService {
     }
   }
   getToken() {
-    // Retrieve user token from localStorage
+    // Retrieve token from localStorage
     return localStorage.getItem("id_token");
   }
   login(idToken) {
