@@ -20,17 +20,23 @@ const db = require('./config/connection');
 //--
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+//and apply it to the Express server as middleware. (its enabled, now where to put it)
 server.applyMiddleware({ app });
 //--
 
 
 //impliment the apollo server
 const server = new ApolloServer({
+  //pulled from https://www.apollographql.com/docs/apollo-server/security/authentication/
+  //site called for double perenthesis but server would fail if I kept them?
+  context: authMiddleware,
   typeDefs,
   resolvers
+  
+  
 });
 
-
+//start code
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));

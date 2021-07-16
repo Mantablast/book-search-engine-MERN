@@ -18,7 +18,7 @@ const { gql } = require("apollo-server-express");
 //Auth  (validate token . if token present)
 
 //Hint Use the functionality in the user-controller.js as a guide.
-
+//referenced from https://www.apollographql.com/docs/tutorial/schema/
 const typeDefs = gql`
   type Book {
     _id: ID!
