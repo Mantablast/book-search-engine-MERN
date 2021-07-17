@@ -6,8 +6,7 @@
 //export resolvers for use elsewhere
 //Define the query and mutation functionality to work with the Mongoose models.
 const {Book,User} = require('../models')
-// import user model
-const { User } = require('../models');
+
 // import sign token function from auth
 const { signToken } = require('../utils/auth');
 const resolvers ={
