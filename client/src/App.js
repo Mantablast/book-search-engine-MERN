@@ -6,7 +6,8 @@ import ApolloClient from 'apollo-boost';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //referenced from shop shop lesson 
 import Navbar from './components/Navbar';
-//initiate apollo client for all
+
+// initiate apollo client for all
 const client = new ApolloClient({
   request: operation => {
     const token = localStorage.getItem('id_token');
