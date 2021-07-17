@@ -26,6 +26,7 @@ server.applyMiddleware({ app });
 
 
 //impliment the apollo server
+//using context to clean up server after use, restarts session
 const server = new ApolloServer({
   //pulled from https://www.apollographql.com/docs/apollo-server/security/authentication/
   //site called for double perenthesis but server would fail if I kept them?
