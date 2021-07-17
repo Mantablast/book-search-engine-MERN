@@ -3,7 +3,6 @@
 // SAVE_BOOK will execute the saveBook mutation.
 // REMOVE_BOOK will execute the removeBook mutation.
 import gql from "graphql-tag";
-
 //save and delete books from list,  similar to the get me query
 export const SAVE_BOOK = gql`
   mutation saveBook($book: SavedBookInput!) {
@@ -41,7 +40,6 @@ export const REMOVE_BOOK = gql`
     }
   }
 `;
-
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
@@ -53,7 +51,6 @@ export const ADD_USER = gql`
     }
   }
 `;
-
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
@@ -65,7 +62,6 @@ export const LOGIN_USER = gql`
     }
   }
 `;
-
 //reference from lesson
 // export const ADD_THOUGHT = gql`
 //   mutation addThought($thoughtText: String!) {
