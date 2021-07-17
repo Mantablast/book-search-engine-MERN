@@ -1,3 +1,4 @@
+//lesson 21.1.4
 const express = require('express');
 //routing still needed for good oranization
 const routes = require('./routes');
@@ -9,7 +10,9 @@ const PORT = process.env.PORT || 3001;
 const path = require('path');
 //connect to database still needed
 const db = require('./config/connection');
-
+//put in apollo
+const { ApolloServer } = require('apollo-server-express');
+//
 //pseudo coding *
 //will need to make graphql typedefs and resolver and also to be imported for use
 //needs the middleware authorization to connect and authorize
